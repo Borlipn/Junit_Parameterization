@@ -1,0 +1,14 @@
+package core.Junit;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class PrimeNumber_JunitParameterization {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}
