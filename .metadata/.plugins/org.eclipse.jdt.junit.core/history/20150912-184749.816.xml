@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="PrimeNumber_JunitParamet_Contractor" project="Junit" tests="5" started="5" failures="0" errors="0" ignored="0">
+  <testsuite name="core.Junit.PrimeNumber_JunitParamet_Contractor" time="0.008">
+    <testsuite name="[0]" time="0.004">
+      <testcase name="testPrimeNumber[0]" classname="core.Junit.PrimeNumber_JunitParamet_Contractor" time="0.004"/>
+    </testsuite>
+    <testsuite name="[1]" time="0.001">
+      <testcase name="testPrimeNumber[1]" classname="core.Junit.PrimeNumber_JunitParamet_Contractor" time="0.001"/>
+    </testsuite>
+    <testsuite name="[2]" time="0.0">
+      <testcase name="testPrimeNumber[2]" classname="core.Junit.PrimeNumber_JunitParamet_Contractor" time="0.0"/>
+    </testsuite>
+    <testsuite name="[3]" time="0.001">
+      <testcase name="testPrimeNumber[3]" classname="core.Junit.PrimeNumber_JunitParamet_Contractor" time="0.001"/>
+    </testsuite>
+    <testsuite name="[4]" time="0.002">
+      <testcase name="testPrimeNumber[4]" classname="core.Junit.PrimeNumber_JunitParamet_Contractor" time="0.002"/>
+    </testsuite>
+  </testsuite>
+</testrun>

@@ -1,0 +1,57 @@
+package core.Junit;
+
+import static org.junit.Assert.assertEquals;
+
+import java.util.Arrays;
+import java.util.Collection;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameter;
+import org.junit.runners.Parameterized.Parameters;
+
+
+@RunWith(Parameterized.class)
+public class PrimeNumber_JunitParamet_Contractor {
+
+	//Fields
+	
+	private int inputNum;
+	private boolean expected;
+	
+	//Constructor
+	
+	public PrimeNumber_JunitParamet_Contractor (boolean expectedResult, int Prime_Numbers) {
+		expected = expectedResult;
+		inputNum = Prime_Numbers;
+	
+	//Test data generator
+	
+	@Parameters//(name = "Iteration # {index}: Number: {0}; isPrime? {1}")
+    public static Collection<Object[]> isPrime()  {
+    	 return Arrays.asList(new Object[][]     {
+        	   
+        	   {1, false},
+        	   {2, true},
+        	   {3, true},
+        	   {4, false},
+        					});}}
+	
+
+
+    private void isPrime() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Test
+    public void testPrimeNumber() {
+    	PrimeNumber add = new PrimeNumber();
+   System.out.println("Is " + inputNum + " a prime number? - " + expected);
+    assertEquals(expected, add.isPrime(inputNum));
+    }
+}
+

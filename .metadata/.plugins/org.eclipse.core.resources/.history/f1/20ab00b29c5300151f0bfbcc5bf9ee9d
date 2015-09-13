@@ -1,0 +1,72 @@
+package core.Junit;
+
+import static org.junit.Assert.assertEquals;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.Collection;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameter;
+import org.junit.runners.Parameterized.Parameters;
+
+@RunWith(Parameterized.class)
+public class PrimeNum_JunitParameter_CVS  {
+
+	private PrimeNumber primenum;
+
+	@Before
+	public void initialize() throws Exception {
+		primenum = new PrimeNumber();
+	}
+	
+	@Parameter(value =0)
+	public Integer inputNumber;
+	
+    @Parameter(value = 1)
+    public Boolean expectedResult;
+	
+
+    @Parameters(name = "Iteration # {index}: Number: {0}; isPrime? {1}")
+    public static Collection<Object[]> primeNumbers() throws IOException   {
+		String csvFile = "./src/main/resources/Array_Data.csv";
+		BufferedReader br = null;
+		String line = null;
+		String SplitBy = ",";
+		String num = null;
+		String tf = null; // true or false 
+		 int count = 1;
+
+
+			br = new BufferedReader(new FileReader(csvFile));
+			while ((line = br.readLine()) != null) {
+
+				String[] csv = line.split(SplitBy);
+
+				num = csv[0];
+				tf = csv[1];
+
+	        do {
+			  Object[][] data = new Object[][]      {
+			     {num, tf},       		 };
+			      count++; } 
+	        while (count < 101);} 	
+                  //return Arrays.asList(data);		}   
+			br.close();
+			//return null;
+			}
+
+    @Test
+    public void testPrimeNumber() {
+    System.out.println("Is " + inputNumber + " a prime number? - " + expectedResult);
+    assertEquals(expectedResult, primenum.isPrime(inputNumber));
+    }
+    
+}
+
+
